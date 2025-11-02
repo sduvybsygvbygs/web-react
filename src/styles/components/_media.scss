@@ -25,18 +25,3 @@
     text-align: center;
   }
 }
-
-.team__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.team__list > * {
-  flex: 0 1 250px;
-  box-sizing: border-box;
-}

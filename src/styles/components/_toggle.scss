@@ -1,0 +1,22 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: .25rem .5rem;
+
+  &__btn {
+    border: 0;
+    background: var(--brand);
+    color: #fff;
+    border-radius: 99px;
+    padding: .25rem .75rem;
+    cursor: pointer;
+  }
+
+  &__btn[aria-pressed="true"] {
+    background: #0c4a86;
+  }
+}
