@@ -1,8 +1,12 @@
+.app-theme-root {
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100svh;
+}
+
 .main{
   padding: var(--space-6);
-  max-width: var(--container);
   width: 100%;
-  margin-inline: auto;
 
   &__title{ margin: 0 0 var(--space-6); }
 }
