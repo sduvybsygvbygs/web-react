@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/echo/:path*",
+      "destination": "https://postman-echo.com/:path*"
+    }
+  ]
+}
