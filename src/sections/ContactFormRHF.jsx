@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import {useNavigateCountdown} from "../hooks/useNavigateCountdown.js";
 
 export default function ContactFormRHF() {
     const [status, setStatus] = useState('idle');
     const [error, setError]   = useState('');
+
+    const { startCountdown } = useNavigateCountdown();
+
     const endpoint = 'https://jsonplaceholder.typicode.com/posts';
 
     const {
@@ -35,6 +39,12 @@ export default function ContactFormRHF() {
             console.log('JSONPlaceholder:', json);
             setStatus('success');
             reset();
+
+            startCountdown(5, "/", {
+                replace: true,
+                state: { from: "contact-success" },
+            });
+
         } catch (e) {
             setError(e.message || 'Network error');
             setStatus('error');
